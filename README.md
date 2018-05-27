@@ -1,5 +1,7 @@
 # telegram-get-participants
 
+With this script you get the first 10.000 users of a telegram chat/channel. The get_participants.py is part of Pyrogram - Telegram MTProto API Client Library for Python.
+
 ## Requirements
 - Ubuntu 16.04  
 - Python 3.4 or higher.
@@ -27,7 +29,7 @@ app = Client(
     api_id=123456,
     api_hash="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Execute `extractUsers.sh`bash script
+Execute `extractUsers.sh` bash script
 
 ```
 chmod 755 extractUsers.sh
