@@ -30,7 +30,7 @@ app = Client(
     api_hash="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
-Change channel/chat name in `get_participants.py`
+Change channel/chat name in `get_participants.py` (important: you need admin rights for this channel/chat)
 ```
 target = "coin_analyse"
 ```
