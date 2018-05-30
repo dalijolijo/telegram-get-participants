@@ -29,6 +29,12 @@ app = Client(
     api_id=123456,
     api_hash="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
+
+Change channel/chat name in `get_participants.py`
+```
+target = "coin_analyse"
+```
+
 Execute `extractUsers.sh` bash script
 
 ```
