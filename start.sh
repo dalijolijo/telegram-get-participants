@@ -5,20 +5,20 @@ set -u
 # Set passwd of telegram user
 #
 echo telegram:${TELEPWD} | chpasswd
-mkdir -p /home/telegram/
-chown -R telegram:telegram /home/telegram
+sudo mkdir -p /home/telegram/
+sudo chown -R telegram:telegram /home/telegram
 
 #
 # Downloading extractUsers.sh and get_participants.py
 #
 cd /tmp/
-wget https://github.com/dalijolijo/telegram-get-participants/raw/master/extractUsers.sh --output-document=/tmp/extractUsers.sh
-wget https://github.com/dalijolijo/telegram-get-participants/raw/master/get_participants.py --output-document=/tmp/get_participants.py
-chown telegram:telegram /tmp/extractUsers.sh
-chown telegram:telegram /tmp/get_participants.py
-chown -R telegram:telegram /home/telegram/
-sudo -u telegram cp /tmp/extractUsers.sh /home/telegram/extractUsers.sh
-sudo -u telegram cp /tmp/get_participants.py /home/telegram/get_participants.py
+sudo wget https://github.com/dalijolijo/telegram-get-participants/raw/master/extractUsers.sh --output-document=/tmp/extractUsers.sh
+sudo wget https://github.com/dalijolijo/telegram-get-participants/raw/master/get_participants.py --output-document=/tmp/get_participants.py
+sudo chown telegram:telegram /tmp/extractUsers.sh
+sudo chown telegram:telegram /tmp/get_participants.py
+sudo chown -R telegram:telegram /home/telegram/
+sudo cp /tmp/extractUsers.sh /home/telegram/extractUsers.sh
+sudo cp /tmp/get_participants.py /home/telegram/get_participants.py
 
 #
 # Set Telegram API developer data
@@ -30,9 +30,9 @@ sed -i s/CHANNEL/${CHANNEL}/g /home/telegram/get_participants.py
 #
 # Execution of extractUsers script
 #
-sudo -u telegram chmod +x /home/telegram/extractUsers.sh
-sudo -u telegram chmod +x /home/telegram/get_participants.py
-sudo -u telegram /bin/bash /home/telegram/extractUsers.sh
+sudo chmod +x /home/telegram/extractUsers.sh
+sudo chmod +x /home/telegram/get_participants.py
+sudo /bin/bash /home/telegram/extractUsers.sh
 
 #
 # Starting Supervisor Service
