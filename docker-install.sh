@@ -21,12 +21,6 @@ echo -n "Enter your Telegram Channel/Chat (e.g. coin_analyse) which you want to 
 read CHANNEL
 
 #
-# Installation of docker-ce package (Ubuntu 16.04)
-#
-apt-get update
-sudo curl -sSL https://get.docker.com | sh
-
-#
 # Pull telegram-get-participants
 #
 docker pull ${DOCKER_REPO}/https://github.com/dalijolijo/telegram-get-participants.git
