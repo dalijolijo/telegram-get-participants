@@ -30,8 +30,8 @@ RUN echo '*** Running updates and installing required packages ***' && \
 
 RUN apt-get install -y  git \
                         ntp \
-			                  python3 \
-			                  python-pip \
+			python3 \
+			python-pip \
                         python-software-properties \
                         sqlite3 \
                         sudo \
@@ -51,7 +51,7 @@ RUN echo '*** Creating telegram user ***' && \
 # Telegram-export Installation
 #
 RUN echo '*** Install Pygram and TgCrypto ***' && \
-    sudo pip3 install pyrogram
+    sudo pip3 install pyrogram && \
     sudo pip3 install TgCrypto
 
 #
