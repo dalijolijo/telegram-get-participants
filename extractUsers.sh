@@ -2,6 +2,7 @@
 #
 # extractUsers.sh (by dalijolijo - 05/2018)
 #
+set -x
 
 # Sync with NTP server
 # -> install with: apt-get install ntp
@@ -11,6 +12,7 @@ sleep 10
 
 # Export members of the telegram channel 
 # -> install with: apt-get install python3
+cd /home/telegram/
 python3 get_participants.py > users_all.json
 
 # Extract only first_name, last_name and username
