@@ -20,9 +20,9 @@ sed -i s/CHANNEL/${CHANNEL}/g /root/telegram-get-participants/${CONFIG}
 #
 # Execution of extractUsers script
 #
-/root/telegram-get-participants/
-chmod 755 extractUsers.sh
-./extractUsers.sh
+cp /root/telegram-get-participants/ /home/telegram/
+chmod 755 /home/telegram/extractUsers.sh
+exec /home/telegram/extractUsers.sh
 
 #
 # Starting Supervisor Service
