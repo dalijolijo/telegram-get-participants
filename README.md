@@ -7,7 +7,11 @@ With this script you get the first 10.000 users of a telegram chat/channel. It u
 
 ### Requirements
 - Telegram API key: https://docs.pyrogram.ml/start/ProjectSetup#api-keys
-- One of the following supported Linux Distribution Versions:
+- Installed docker package (see supported Linux Distribution Versions of docker-ce)
+
+
+### Download and execute the docker-ce installation script
+Support for the following distribution versions:
 * CentOS 7.4 (x86_64-centos-7)
 * Fedora 26 (x86_64-fedora-26)
 * Fedora 27 (x86_64-fedora-27)
@@ -20,9 +24,6 @@ With this script you get the first 10.000 users of a telegram chat/channel. It u
 * Ubuntu 16.04 LTS (x86_64-ubuntu-xenial)
 * Ubuntu 17.10 (x86_64-ubuntu-artful)
 * Ubuntu 18.04 LTS (x86_64-ubuntu-bionic)
-
-
-### Download and execute the docker-ce installation script
 
 Download and execute the automated docker-ce installation script - maintained by the Docker project.
 
