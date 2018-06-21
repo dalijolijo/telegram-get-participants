@@ -12,7 +12,9 @@ With this script you get the first 10.000 users of a telegram chat/channel. It u
 ### Installing
 
 ```
-apt-get install python-software-properties python3 ntp git
+apt-get update
+sudo apt-get -y install python-software-properties python3 ntp git
+sudo apt-get -y install python3-pip
 pip3 install pyrogram
 pip3 install TgCrypto
 ```
