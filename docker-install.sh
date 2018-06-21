@@ -18,7 +18,7 @@ echo -n "Enter your Telegram API ID and Hit [ENTER]: "
 read API_ID
 echo -n "Enter your Telegram API Hash and Hit [ENTER]: "
 read API_HASH
-echo -n "Enter your Telegram Channel/Chat (e.g. coin_analyse) which you want to export users and Hit [ENTER]: "
+echo -n "Enter your Telegram Channel/Chat (e.g. coin_analyse) from which you want to export users and Hit [ENTER]: "
 read CHANNEL
 
 #
