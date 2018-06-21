@@ -18,6 +18,13 @@ sed -i s/API_HASH/${API_HASH}/g /root/telegram-get-participants/${CONFIG}
 sed -i s/CHANNEL/${CHANNEL}/g /root/telegram-get-participants/${CONFIG}
 
 #
+# Execution of extractUsers script
+#
+/root/telegram-get-participants/
+chmod 755 extractUsers.sh
+./extractUsers.sh
+
+#
 # Starting Supervisor Service
 #
 # Hint: docker not supported systemd, use of supervisord
