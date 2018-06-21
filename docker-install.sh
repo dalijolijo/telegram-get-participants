@@ -24,7 +24,7 @@ read CHANNEL
 #
 # Pull telegram-get-participants
 #
-docker docker rm ${CONTAINER_NAME} >/dev/null
+docker rm ${CONTAINER_NAME} >/dev/null
 docker pull ${DOCKER_REPO}/https://github.com/dalijolijo/telegram-get-participants.git
 docker run --name ${CONTAINER_NAME} -e TELEPWD="${TELEPWD}" -e API_ID="${API_ID}" -e API_HASH="${API_HASH}" -e CHANNEL="${CHANNEL}" -v /home/telegram:/home/telegram:rw -d ${DOCKER_REPO}/telegram-get-participants
 
