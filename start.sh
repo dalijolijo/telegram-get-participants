@@ -32,7 +32,6 @@ sed -i s/CHANNEL/${CHANNEL}/g /home/telegram/get_participants.py
 #
 sudo chmod +x /home/telegram/extractUsers.sh
 sudo chmod +x /home/telegram/get_participants.py
-sudo /bin/bash /home/telegram/extractUsers.sh
 
 #
 # Starting Supervisor Service
