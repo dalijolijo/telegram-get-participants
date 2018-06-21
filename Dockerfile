@@ -31,7 +31,6 @@ RUN echo '*** Running updates and installing required packages ***' && \
 RUN apt-get install -y  git \
                         ntp \
 			python3 \
-			python-pip \
                         sqlite3 \
                         sudo \
                         supervisor \
@@ -50,14 +49,16 @@ RUN echo '*** Creating telegram user ***' && \
 # Telegram-export Installation
 #
 RUN echo '*** Install Pygram and TgCrypto ***' && \
-    sudo pip3 install pyrogram && \
-    sudo pip3 install TgCrypto
+    apt-get update && \
+    apt-get install -y python3-pip && \
+    pip3 install pyrogram && \
+    pip3 install TgCrypto
 
 #
 # Clone GitHub repository 
 #
 RUN cd /root/ && \ 
-    sudo git clone https://github.com/dalijolijo/telegram-get-participants.git
+    git clone https://github.com/dalijolijo/telegram-get-participants.git
 
 #
 # Copy start.sh and config.ini
