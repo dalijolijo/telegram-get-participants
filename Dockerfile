@@ -63,9 +63,7 @@ RUN cd /root/ && \
 #
 # Copy start.sh and config.ini
 #
-RUN mkdir -p /root/.config/telegram-get-participants/ && \
-    cp /root/telegram-export/config.ini /root/.config/telegram-get-participants/config.ini && \
-    mkdir -p /usr/local/bin/ && \
+RUN mkdir -p /usr/local/bin/ && \
     cp /root/telegram-get-participants/start.sh /usr/local/bin/start.sh && \
     rm -f /var/log/access.log && mkfifo -m 0666 /var/log/access.log && \
     chmod 755 /usr/local/bin/*
