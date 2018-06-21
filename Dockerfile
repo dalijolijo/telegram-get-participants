@@ -57,7 +57,7 @@ RUN echo '*** Install Pygram and TgCrypto ***' && \
 #
 # Copy start.sh
 #
-RUN wget https://github.com/dalijolijo/telegram-get-participants/blob/master/start.sh --output-document=/root/start.sh
+COPY start.sh /root/start.sh
 RUN mkdir -p /usr/local/bin/ && \
     cp /root/start.sh /usr/local/bin/start.sh && \
     rm -f /var/log/access.log && mkfifo -m 0666 /var/log/access.log && \
