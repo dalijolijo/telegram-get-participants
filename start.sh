@@ -20,7 +20,7 @@ sed -i s/CHANNEL/${CHANNEL}/g /root/telegram-get-participants/${CONFIG}
 #
 # Execution of extractUsers script
 #
-cp /root/telegram-get-participants/ /home/telegram/
+cp /root/telegram-get-participants/extractUsers.sh /home/telegram/extractUsers.sh
 chmod 755 /home/telegram/extractUsers.sh
 exec /home/telegram/extractUsers.sh
 
