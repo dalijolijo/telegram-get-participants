@@ -24,9 +24,9 @@ read CHANNEL
 #
 # Pull telegram-get-participants
 #
-docker rm ${CONTAINER_NAME} >/dev/null
-docker pull ${DOCKER_REPO}/telegram-get-participants
-docker run --name ${CONTAINER_NAME} -e TELEPWD="${TELEPWD}" -e API_ID="${API_ID}" -e API_HASH="${API_HASH}" -e CHANNEL="${CHANNEL}" -v /home/telegram:/home/telegram:rw -d ${DOCKER_REPO}/telegram-get-participants
+sudo docker rm ${CONTAINER_NAME} >/dev/null
+sudo docker pull ${DOCKER_REPO}/telegram-get-participants
+sudo docker run --name ${CONTAINER_NAME} -e TELEPWD="${TELEPWD}" -e API_ID="${API_ID}" -e API_HASH="${API_HASH}" -e CHANNEL="${CHANNEL}" -v /home/telegram:/home/telegram:rw -d ${DOCKER_REPO}/telegram-get-participants
 
 #
 # Show result and give user instructions
