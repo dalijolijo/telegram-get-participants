@@ -11,19 +11,30 @@ mkdir -p /home/telegram/
 chown -R telegram:telegram /home/telegram
 
 #
+# Downloading extractUsers.sh and get_participants.py
+#
+cd /tmp/
+wget https://github.com/dalijolijo/telegram-get-participants/raw/master/extractUsers.sh --output-document=/tmp/extractUsers.sh
+wget https://github.com/dalijolijo/telegram-get-participants/raw/master/${CONFIG} --output-document=/tmp/${CONFIG}
+chown telegram:telegram /tmp/extractUsers.sh
+chown telegram:telegram /tmp/${CONFIG}
+chown -R telegram:telegram /home/telegram/
+sudo -u telegram cp /tmp/extractUsers.sh /home/telegram/extractUsers.sh
+sudo -u telegram cp /tmp/${CONFIG} /home/telegram/${CONFIG}
+
+#
 # Set Telegram API developer data
 #
-sed -i s/API_ID/${API_ID}/g /root/telegram-get-participants/${CONFIG}
-sed -i s/API_HASH/${API_HASH}/g /root/telegram-get-participants/${CONFIG}
-sed -i s/CHANNEL/${CHANNEL}/g /root/telegram-get-participants/${CONFIG}
+sed -i s/API_ID/${API_ID}/g /home/telegram/${CONFIG}
+sed -i s/API_HASH/${API_HASH}/g /home/telegram/${CONFIG}
+sed -i s/CHANNEL/${CHANNEL}/g /home/telegram/${CONFIG}
 
 #
 # Execution of extractUsers script
 #
-wget https://github.com/dalijolijo/telegram-get-participants/raw/master/extractUsers.sh --output-document=/home/telegram/extractUsers.sh
-wget https://github.com/dalijolijo/telegram-get-participants/raw/master/${CONFIG} --output-document=/home/telegram/${CONFIG}
-chmod 755 /home/telegram/extractUsers.sh
-exec /home/telegram/extractUsers.sh
+sudo -u telegram +x /home/telegram/extractUsers.sh
+sudo -u telegram +x /home/telegram/${CONFIG}
+sudo -u telegram /home/telegram/extractUsers.sh
 
 #
 # Starting Supervisor Service
