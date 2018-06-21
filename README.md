@@ -48,7 +48,8 @@ You will be asked for a new `telegram` user password, for your `Telegram API ID`
 Execute `extractUsers.sh` script to get channel participants:
 
 ```
-sudo /bin/bash /home/telegram/extractUsers.sh
+cd /home/telegram/
+./extractUsers.sh
 ```
 You will be asked for your `PHONE NUMBER` and a registration code will be send to your phone.
 
