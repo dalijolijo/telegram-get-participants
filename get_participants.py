@@ -26,16 +26,15 @@ from pyrogram.api.errors import FloodWait
 Refer to get_participants2.py for more than 10.000 users.
 """
 
-#app = Client("my_account")
 app = Client(
     session_name="my_account",
-    api_id=123456,
-    api_hash="xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    api_id=API_ID,
+    api_hash="API_HASH"
 )
 
 app.start()
 
-target = "coin_analyse"  # Target channel/supergroup
+target = "CHANNEL"  # Target channel/supergroup
 users = []  # List that will contain all the users of the target chat
 limit = 200  # Amount of users to retrieve for each API call
 offset = 0  # Offset starts at 0
