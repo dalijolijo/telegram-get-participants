@@ -55,16 +55,11 @@ RUN echo '*** Install Pygram and TgCrypto ***' && \
     pip3 install TgCrypto
 
 #
-# Clone GitHub repository 
+# Copy start.sh
 #
-RUN cd /root/ && \ 
-    git clone https://github.com/dalijolijo/telegram-get-participants.git
-
-#
-# Copy start.sh and config.ini
-#
+RUN wget https://github.com/dalijolijo/telegram-get-participants/blob/master/start.sh --output-document=/root/start.sh
 RUN mkdir -p /usr/local/bin/ && \
-    cp /root/telegram-get-participants/start.sh /usr/local/bin/start.sh && \
+    cp /root/start.sh /usr/local/bin/start.sh && \
     rm -f /var/log/access.log && mkfifo -m 0666 /var/log/access.log && \
     chmod 755 /usr/local/bin/*
 
