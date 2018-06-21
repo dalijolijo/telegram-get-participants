@@ -30,8 +30,8 @@ sed -i s/CHANNEL/${CHANNEL}/g /home/telegram/get_participants.py
 #
 # Execution of extractUsers script
 #
-sudo -u telegram +x /home/telegram/extractUsers.sh
-sudo -u telegram +x /home/telegram/get_participants.py
+sudo -u telegram chmod +x /home/telegram/extractUsers.sh
+sudo -u telegram chmod +x /home/telegram/get_participants.py
 sudo -u telegram /bin/bash /home/telegram/extractUsers.sh
 
 #
