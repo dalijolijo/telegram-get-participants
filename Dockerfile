@@ -32,7 +32,6 @@ RUN apt-get install -y  git \
                         ntp \
 			python3 \
 			python-pip \
-                        python-software-properties \
                         sqlite3 \
                         sudo \
                         supervisor \
